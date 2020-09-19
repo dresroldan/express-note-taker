@@ -14,23 +14,20 @@ module.exports = function(app) {
     app.post("/api/notes", function(req, res) {
         let newNote = req.body;
         notes.push(newNote);
-        // newDb();
+
         return console.log("Added new note: " + notes.title);
 
     });
 
-    // app.get("/api/notes/:id", function(req, res) {
-    //     res.json(parsedDB[req.params.id]);
+    app.delete("/api/notes/:id", function(req, res) {
 
 
-    // });
 
-    // app.delete("/api/notes/:id", function(req, res) {
-    //     parsedDB.splice(req.params.id, 1);
-    //     newDb();
-    //     console.log("Deleted note with id " + req.params.id);
+    });
 
-    // });
+
+
+
 
 
 
