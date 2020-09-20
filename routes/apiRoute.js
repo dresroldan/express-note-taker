@@ -5,7 +5,6 @@ const notesDB = JSON.parse(db);
 module.exports = function(app) {
 
     app.get("/api/notes", function(req, res) {
-
         res.json(notesDB);
     });
 
@@ -18,7 +17,6 @@ module.exports = function(app) {
 
         notesDB.push(newNote);
         writeNewDB();
-
         return console.log("Added new note: " + newNote.title);
 
     });
@@ -28,6 +26,7 @@ module.exports = function(app) {
         notesDB.splice(req.params.id, );
         writeNewDB();
         console.log("Deleted note with id " + req.params.id);
+
     });
 
 
@@ -37,9 +36,4 @@ module.exports = function(app) {
             return true;
         });
     }
-
-
-
-
-
 };
